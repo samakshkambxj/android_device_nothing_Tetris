@@ -189,6 +189,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 PRODUCT_PACKAGES += \
+    LineageSDKResTarget \
     LineageSettingsResTarget \
     LineageSystemUIResTarget
 
