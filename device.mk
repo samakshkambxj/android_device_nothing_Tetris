@@ -190,6 +190,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     LineageSDKResTarget \
+    LineageSettingsProviderResTarget \
     LineageSettingsResTarget \
     LineageSystemUIResTarget
 
