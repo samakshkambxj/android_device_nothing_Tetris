@@ -7,10 +7,6 @@ on init
     write /dev/cpuset/top-app/cpus 0-7
 
 on post-fs-data
-
-    # Disable watermark boost
-    write /proc/sys/vm/watermark_boost_factor 0
-
     # multi-gen LRU
     write /sys/kernel/mm/lru_gen/enabled y
 
@@ -21,7 +17,6 @@ on post-fs-data
     write /sys/kernel/mm/swap/vma_ra_enabled false
 
     # memory reserve tuning
-    write /proc/sys/vm/watermark_boost_factor 0
     write /proc/sys/vm/min_free_kbytes 27386
     write /proc/sys/vm/lowmem_reserve_ratio "0 0 0"
 
