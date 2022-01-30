@@ -325,6 +325,10 @@ ro.vendor.display.set_hdr_brightness_early=1
 ro.vendor.display.thermal_limit_brightness=4095,3543,2974,2680,2047,1806,1635,1433,1248,1046,832
 ro.vendor.display.user.control.lux=0,100,1000,2500,4500
 
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
+
 # Keystore
 ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
