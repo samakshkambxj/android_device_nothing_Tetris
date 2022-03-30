@@ -362,6 +362,7 @@ ro.vendor.mtk_aod_support=1
 ro.vendor.mtk_hdr_video_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.mtk.vdec.decode.error.handle.mode=1
+vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 vendor.mtk_thumbnail_optimization=true
 vendor.performance.frs.tz_name=shell_max
