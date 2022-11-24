@@ -485,4 +485,7 @@
         <item>com.twitter.android:0.07</item>
         <item>com.google.android.youtube:0.07</item>
     </string-array>
+
+    <!-- Whether or not wcg mode should be enabled on this device -->
+    <bool name="config_enableWcgMode">true</bool>
 </resources>
