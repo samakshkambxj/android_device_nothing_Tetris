@@ -7,5 +7,8 @@ ro.camerax.extensions.enabled=true
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
+# RKP
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
 # Voice assitant
 ro.opa.eligible_device=true
