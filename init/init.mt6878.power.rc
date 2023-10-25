@@ -3,6 +3,8 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "performance"
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "performance"
 
+    write /proc/sys/kernel/sched_pelt_multiplier 1
+
 on init
     # UFS
     write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
