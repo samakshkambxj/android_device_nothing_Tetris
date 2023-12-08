@@ -38,6 +38,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libaudioclient_shim.so'),
     'system_ext/lib64/libsource.so': blob_fixup()
         .add_needed('libui_shim.so'),
+    'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
     'vendor/bin/hw/vendor.noth.hardware.charge-service': blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
