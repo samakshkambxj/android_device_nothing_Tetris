@@ -18,6 +18,9 @@ persist.vendor.audio.usb.offload=true
 persist.vendor.audiohal.p2w_dump_on=0
 persist.vendor.audiohal.pcm_mixer_dump_on=0
 persist.vendor.debug_policy=minidump
+persist.vendor.audiohal.aurisys.pcm_dump_on=0
+persist.vendor.audiohal.p2w_dump_on=0
+persist.vendor.audiohal.pcm_mixer_dump_on=0
 persist.vendor.debug_policy.ready=1
 persist.vendor.newdirac.cur.config=MUSIC
 persist.vendor.newdirac.dump=0
@@ -31,6 +34,11 @@ vendor.audio.powerhal.power.dl=true
 vendor.audio.powerhal.power.ul=true
 vendor.audio.usb.iems.period_us=5000
 vendor.bluetooth.ldac.abr=true
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.streamin.pcm.dump=0
 
 # Bluetooth
 bluetooth.profile.a2dp.source.enabled=true
