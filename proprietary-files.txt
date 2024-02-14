@@ -1253,7 +1253,6 @@ vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/bin/thermal_core
 vendor/bin/thermal_intf
 vendor/etc/init/init.thermal_core.rc
-vendor/etc/init/thermal-mediatek.rc
 vendor/etc/thermal/disable_skin_control.conf
 vendor/etc/thermal/disable_thermal.conf
 vendor/etc/thermal/disable_thermal_temp.conf
@@ -1275,8 +1274,6 @@ vendor/etc/thermal/thermal_policy_12.conf
 vendor/etc/thermal/thermal_policy_13.conf
 vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_15.conf
-vendor/etc/mpe.conf
-vendor/lib64/hw/thermal_hal.so
 
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
