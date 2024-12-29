@@ -1,3 +1,8 @@
+on early-init
+    # boot perf. tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "performance"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "performance"
+
 on init
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
@@ -61,6 +66,10 @@ on property:sys.boot_completed=1
 
     # Adjust watermark level
     write /proc/sys/vm/watermark_scale_factor 200
+
+    # restore boot perf. tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedutil"
 
     # Utilization Clamping
     # Tuning
