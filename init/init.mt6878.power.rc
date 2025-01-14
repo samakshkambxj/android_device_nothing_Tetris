@@ -4,6 +4,9 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "performance"
 
 on init
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
+
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
 
@@ -23,6 +26,9 @@ on init
     write /proc/sys/kernel/sched_wakeup_granularity_ns 2000000
 
 on charger
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
+
     # Keep one LITTLE and one big
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
@@ -73,6 +79,9 @@ on boot
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/nr_requests 64
     write /sys/block/sdc/queue/nr_requests 64
+
+    # UFS
+    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
 
     # zram
     swapon_all /vendor/etc/fstab.enableswap
