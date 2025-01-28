@@ -1,0 +1,28 @@
+cc_binary {
+    name: "android.hardware.vibrator.service.Tetris-richtap",
+    vendor: true,
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-DLOG_TAG=\"android.hardware.vibrator.service.Tetris-richtap\"",
+        "-DUSE_RICHTAP_EFFECT_REMAP",
+    ],
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.vibrator.service.Tetris-richtap.rc"],
+    vintf_fragments: [
+        "android.hardware.vibrator.service.Tetris-richtap.xml",
+    ],
+    srcs: [
+        "service.cpp",
+        "Vibrator.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libbase",
+        "libbinder_ndk",
+        "libaacvibrator",
+        "android.hardware.vibrator-V2-ndk",
+    ],
+}

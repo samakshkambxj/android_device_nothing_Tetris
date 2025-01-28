@@ -1308,6 +1308,12 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 
+# Vibrator
+vendor/etc/aac_richtap.config
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/libaacvibrator.so
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V2-ndk.so
+
 # Vibrator firmware
 vendor/firmware/haptic_config.bin
 
