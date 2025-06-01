@@ -88,6 +88,12 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock')
         .add_needed('libbase_shim.so'),
+    'vendor/lib64/libmorpho_RapidEffect.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
     'vendor/lib64/libnvram.so': blob_fixup()
         .add_needed('libbase_shim.so'),
 }  # fmt: skip
