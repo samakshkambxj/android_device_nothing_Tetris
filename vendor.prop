@@ -328,6 +328,7 @@ ro.vendor.display.user.control.lux=0,100,1000,2500,4500
 # HWUI
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
+debug.sf.enable_adpf_cpu_hint=true
 
 # Keystore
 ro.hardware.gatekeeper=trustonic
