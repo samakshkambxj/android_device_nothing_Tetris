@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     init.mt6878.rc \
     init.mt6878.usb.rc \
     init.mtkgki.rc \
+    init.nothing.hw.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6878.rc
