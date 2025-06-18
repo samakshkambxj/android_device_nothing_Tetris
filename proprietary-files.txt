@@ -789,7 +789,7 @@ vendor/firmware/FT3519T_Conf_MultipleTest_V02.ini
 vendor/firmware/focaltech_ts_fw_samsung.bin
 vendor/lib64/hw/mt6878/android.hardware.graphics.allocator-V2-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so
 vendor/lib64/hw/mt6878/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/hwcomposer.mtk_common.so
+vendor/lib64/hw/hwcomposer.mtk_common.so;DISABLE_DEPS
 vendor/lib64/mt6878/arm.mali.platform-V2-ndk.so;SYMLINK=vendor/lib64/arm.mali.platform-V2-ndk.so
 vendor/lib64/mt6878/libmml.so;SYMLINK=vendor/lib64/libmml.so
 vendor/lib64/libcomposer_ext.so
@@ -909,7 +909,7 @@ vendor/lib64/mt6878/libarm_egl_properties_sysprop.so;SYMLINK=vendor/lib64/libarm
 vendor/lib64/mt6878/libarm_gralloc_properties_sysprop.so;SYMLINK=vendor/lib64/libarm_gralloc_properties_sysprop.so
 vendor/lib64/mt6878/libarm_mali_config_sysprops.so;SYMLINK=vendor/lib64/libarm_mali_config_sysprops.so
 vendor/lib64/libged.so
-vendor/lib64/libgpu_aux.so
+vendor/lib64/libgpu_aux.so;DISABLE_DEPS
 vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
@@ -1028,8 +1028,8 @@ vendor/etc/mtk_platform_codecs_config.xml
 vendor/lib64/libadpcmdec_mtk.so
 vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_c2store.so
-vendor/lib64/libcodec2_mtk_vdec.so
-vendor/lib64/libcodec2_mtk_venc.so
+vendor/lib64/libcodec2_mtk_vdec.so;DISABLE_DEPS
+vendor/lib64/libcodec2_mtk_venc.so;DISABLE_DEPS
 vendor/lib64/libcodec2_soft_mtk_alacdec.so
 vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so
 vendor/lib64/libcodec2_soft_mtk_mp3dec.so
