@@ -48,8 +48,6 @@ blob_fixups: blob_fixups_user_type = {
         .apktool_patch('blob-patches'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
-    'vendor/bin/hw/vendor.noth.hardware.charge-service': blob_fixup()
-        .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v33.so')

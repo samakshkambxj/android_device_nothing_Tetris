@@ -720,15 +720,6 @@ vendor/etc/camera/ntcamoverridesettings.txt
 vendor/etc/bh3.dla
 vendor/etc/default_pd_calibration.bin
 
-# Charger
-system_ext/bin/kpoc_charger
-system_ext/etc/init/kpoc_charger.rc
-system_ext/lib64/libshowlogo.so
-vendor/bin/hw/vendor.noth.hardware.charge-service
-vendor/etc/init/vendor.noth.hardware.charge-service.rc
-vendor/etc/vintf/manifest/vendor.noth.hardware.charge-service.xml
-vendor/lib64/vendor.noth.hardware.charge-V1-ndk.so
-
 # Chipset info
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
