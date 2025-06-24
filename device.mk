@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.enableswap \
     fstab.mt6878 \
     fstab.mt6878.vendor_ramdisk \
     init_conninfra.rc \
