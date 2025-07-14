@@ -9,8 +9,6 @@ vendor/lib64/libladder.so
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_rv.xml
 vendor/etc/MBrain_dynamic.xml
-vendor/etc/dirac/dirac_resource.dar
-vendor/etc/dirac/interface.json
 vendor/etc/AudioLog_dynamic.xml
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6878.so;DISABLE_DEPS
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6878.so
@@ -18,7 +16,6 @@ vendor/lib64/hw/android.hardware.audio@7.1-impl-mediatek.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v33.so;FIX_SONAME
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
-vendor/lib64/soundfx/libdiraceffect_NT.so
 vendor/lib64/soundfx/libspatializer.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
@@ -39,7 +36,6 @@ vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
 vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libdirac.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
