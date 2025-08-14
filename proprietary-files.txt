@@ -185,14 +185,8 @@ vendor/etc/audio_framework_configuration.xml
 vendor/firmware/aw882xx_acf.bin
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth-service-mediatek
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
-vendor/etc/init/android.hardware.bluetooth-service-mediatek.rc
-vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
-vendor/etc/vintf/manifest/android.hardware.bluetooth-service-mediatek.xml
 vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
