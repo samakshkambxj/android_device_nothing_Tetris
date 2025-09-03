@@ -13,9 +13,7 @@
 
 #include "aac_vibra_function.h"
 
-#define RICHTAP_LIGHT_STRENGTH 77
-#define RICHTAP_MEDIUM_STRENGTH 97
-#define RICHTAP_STRONG_STRENGTH 100
+#define RICHTAP_STRENGTH 99
 
 enum vibrationMode {
     MODE_NONE,
@@ -89,13 +87,9 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es,
 
     switch (es) {
         case EffectStrength::LIGHT:
-            strength = RICHTAP_LIGHT_STRENGTH;
-            break;
         case EffectStrength::MEDIUM:
-            strength = RICHTAP_MEDIUM_STRENGTH;
-            break;
         case EffectStrength::STRONG:
-            strength = RICHTAP_STRONG_STRENGTH;
+            strength = RICHTAP_STRENGTH;
             break;
         default:
             return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
