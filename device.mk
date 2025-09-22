@@ -205,6 +205,9 @@ PRODUCT_PACKAGES += \
     LineageSettingsResTarget \
     LineageSystemUIResTarget
 
+# Page size
+PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
