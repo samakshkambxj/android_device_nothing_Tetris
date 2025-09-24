@@ -153,7 +153,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6878.vendor_ramdisk \
     init_conninfra.rc \
     init.connectivity.common.rc \
-    init.connectivity.rc \
     init.mt6878.rc \
     init.mt6878.power.rc \
     init.mt6878.usb.rc \
