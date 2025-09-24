@@ -14,10 +14,6 @@ import /vendor/etc/init/hw/init.mt6878.power.rc
 # add to new_feature BEE-142
 import /vendor/etc/init/hw/init.board_id.rc
 
-# init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
-import /vendor/etc/init/hw/init.modem.rc
-# *** DO NOT import the new rc file after this line ***
-
 on early-init
     write /proc/bootprof "INIT:early-init"
 
