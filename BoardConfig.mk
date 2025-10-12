@@ -65,6 +65,7 @@ include $(KERNEL_PATH)/BoardConfigKernel.mk
 # Partitions
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     init_boot \
     odm \
     odm_dlkm \
