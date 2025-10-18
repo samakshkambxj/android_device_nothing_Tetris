@@ -987,7 +987,8 @@ on boot
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
-
+on property:sys.touch.pocket_mode=*
+    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_pocket_mode ${sys.touch.pocket_mode}
 
 on property:sys.UiBatteryLevel=*
     write proc/charger/ui_soc ${sys.UiBatteryLevel}
