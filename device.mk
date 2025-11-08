@@ -270,7 +270,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/bliss/interfaces/power-libperfmgr \
     hardware/mediatek \
-    hardware/mediatek/libmtkperf_client
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -303,10 +304,11 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Wifi
+$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
+
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
-    libwifi-hal-wrapper \
     android.hardware.wifi-service
 
 PRODUCT_COPY_FILES += \

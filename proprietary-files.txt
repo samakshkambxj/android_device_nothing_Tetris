@@ -1297,7 +1297,6 @@ vendor/etc/wifi/nvram/wfnv_desc_data_soc70.bin
 vendor/etc/wifi/nvram/wfnv_desc_map_soc70.bin
 vendor/firmware/connfem.cfg
 vendor/firmware/wifi.cfg
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwapi.so
 vendor/lib64/libwifical.so
 vendor/lib64/libwifinvram.so
