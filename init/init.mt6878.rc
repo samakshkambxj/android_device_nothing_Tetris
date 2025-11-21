@@ -1302,3 +1302,7 @@ on property:dev.mnt.blk.data=sdc84 && property:sys.otg.enable=1
 
 on property:sys.touch.keyguard.state=*
     write /proc/touchpanel/palm_to_sleep_support ${sys.touch.keyguard.state}
+
+# Double Tap to Wake
+on property:vendor.touch.double_tap_to_wake=*
+    write /proc/touchpanel/gesture_mode ${vendor.touch.double_tap_to_wake}
