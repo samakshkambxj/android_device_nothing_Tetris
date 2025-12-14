@@ -136,7 +136,6 @@ debug.sf.enable_transaction_tracing=false
 debug.sf.late.app.duration=11600000
 debug.sf.late.sf.duration=12300000
 debug.sf.set_binder_thread_rt=1
-debug.sf.frame_rate_multiple_threshold=120
 debug.sf.use_phase_offsets_as_durations=1
 ro.hardware.gralloc=common
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
