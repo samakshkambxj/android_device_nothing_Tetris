@@ -205,6 +205,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     NothingCarrierConfigResTarget \
     NothingFrameworksResTarget \
+    NothingLauncher3ResTarget \
     NothingNetworkStackResTarget \
     NothingSettingsResTarget \
     NothingSystemUIResTarget \
