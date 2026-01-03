@@ -56,8 +56,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
         .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
-        .add_needed('libprocessgroup_shim.so')
-        .binary_regex_replace(b'NTFingerprintDimLayer', b'SurfaceView[UdfpsCont'),
+        .add_needed('libprocessgroup_shim.so'),
     (
         'vendor/lib64/mt6878/libcameracustom.imgsensor.core.so',
         'vendor/lib64/mt6878/libcameracustom.so',
