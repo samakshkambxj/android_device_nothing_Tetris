@@ -4,7 +4,6 @@
       "Name": "MemFreq",
       "Path": "/sys/devices/platform/soc/1c00f000.dvfsrc/mtk-dvfsrc-devfreq/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq",
       "Values": [
-        "9999999999",
         "6400000000",
         "5500000000",
         "4266000000",
@@ -108,7 +107,6 @@
       "Name": "CPUEfficiencyClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq",
       "Values": [
-        "9999999",
         "2000000",
         "1950000",
         "1900000",
@@ -143,7 +141,6 @@
       "Name": "CPUEfficiencyClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
       "Values": [
-        "9999999",
         "2000000",
         "1950000",
         "1900000",
@@ -177,7 +174,6 @@
       "Name": "CPUSuperClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq",
       "Values": [
-        "9999999",
         "2500000",
         "2400000",
         "2300000",
@@ -208,7 +204,6 @@
       "Name": "CPUSuperClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
       "Values": [
-        "9999999",
         "2500000",
         "2400000",
         "2300000",
@@ -232,6 +227,16 @@
         "500000",
         "400000"
       ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CciFreq",
+      "Path": "/sys/kernel/cm_mgr/dbg_cm_mgr",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -298,7 +303,8 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "0",
-        "60"
+        "60",
+        "100"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -315,6 +321,48 @@
     }
   ],
   "Actions": [
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUSuperClusterMinFreq",
+      "Duration": 1500,
+      "Value": "1700000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUSuperClusterMaxFreq",
+      "Duration": 1500,
+      "Value": "2500000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUEfficiencyClusterMinFreq",
+      "Duration": 1500,
+      "Value": "1500000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUEfficiencyClusterMaxFreq",
+      "Duration": 1500,
+      "Value": "2000000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "MemFreq",
+      "Duration": 1500,
+      "Value": "4266000000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GpuPwrLevel",
+      "Duration": 1500,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CciFreq",
+      "Duration": 1500,
+      "Value": "1"
+    },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampFGMin",
@@ -342,25 +390,25 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUSuperClusterMinFreq",
-      "Duration": 1000,
-      "Value": "9999999"
+      "Duration": 1500,
+      "Value": "2500000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 1000,
-      "Value": "9999999"
+      "Duration": 1500,
+      "Value": "2000000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "MemFreq",
-      "Duration": 100,
-      "Value": "9999999999"
+      "Duration": 1500,
+      "Value": "4266000000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GpuPwrLevel",
-      "Duration": 100,
+      "Duration": 1500,
       "Value": "0"
     },
     {
@@ -373,13 +421,13 @@
       "PowerHint": "LAUNCH",
       "Node": "UclampTALatency",
       "Duration": 3000,
-      "Value": "1"
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
       "Duration": 1500,
-      "Value": "60"
+      "Value": "100"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
