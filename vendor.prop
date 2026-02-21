@@ -75,6 +75,8 @@ ro.vendor.mtk_cam_security_support=1
 ro.vendor.mtk_camera_app_version=3
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
+vendor.debug.morpho.videoeis.enable=true
+vendor.debug.morpho.zoomeis.enable=true
 vendor.mtk.camera.app.fd.video=1
 
 # Charger
