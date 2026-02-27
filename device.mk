@@ -212,15 +212,14 @@ PRODUCT_BOOT_JARS += \
     nt-fwk.Tetris
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
     NothingCarrierConfigResTarget \
     NothingFrameworksResTarget \
     NothingLauncher3ResTarget \
-    NothingNetworkStackResTarget \
     NothingSettingsResTarget \
-    NothingSystemUIResTarget \
-    NothingTelephonyResTarget \
-    NothingWifiResTarget
+    NothingSystemUIResTarget
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
@@ -256,6 +255,9 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
+
+# Radio
+ENABLE_VENDOR_RIL_SERVICE := true
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/skus/,$(TARGET_COPY_OUT_ODM)/etc)
