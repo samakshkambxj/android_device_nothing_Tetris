@@ -917,6 +917,7 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/priv-app/ImsService/ImsService.apk
 system_ext/priv-app/MtkGbaService/MtkGbaService.apk
+system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
 vendor/bin/hw/vendor.mediatek.hardware.mmagent-service
 vendor/bin/hw/vtservice_aidl
 vendor/bin/ipsec_mon
