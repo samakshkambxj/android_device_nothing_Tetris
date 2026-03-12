@@ -134,10 +134,6 @@
         <fqname>ILog/ModemLogHidlServer</fqname>
     </hal>
     <hal format="aidl">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <fqname>IMDMonitorService/default</fqname>
-    </hal>
-    <hal format="aidl">
         <name>vendor.mediatek.hardware.mmagent</name>
         <fqname>IMMAgent/default</fqname>
     </hal>
