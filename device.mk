@@ -99,7 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek-mali \
+    android.hardware.memtrack-service.mediatek \
     libui_shim
 
 PRODUCT_COPY_FILES += \
