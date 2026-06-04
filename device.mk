@@ -259,6 +259,9 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 # Radio
 ENABLE_VENDOR_RIL_SERVICE := true
 
+PRODUCT_PACKAGES += \
+    mdota_symlink
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/skus/,$(TARGET_COPY_OUT_ODM)/etc)
 
