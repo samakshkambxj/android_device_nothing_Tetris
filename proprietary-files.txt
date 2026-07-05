@@ -709,10 +709,6 @@ vendor/etc/camera/ntcamoverridesettings.txt
 vendor/etc/bh3.dla
 vendor/etc/default_pd_calibration.bin
 
-# Chipset info
-vendor/bin/chipinfo
-vendor/etc/init/chipinfo_init.rc
-
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
