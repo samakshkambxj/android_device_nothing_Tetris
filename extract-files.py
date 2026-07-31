@@ -53,6 +53,47 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
     (
+        'vendor/lib64/mt6878/libcameracustom.imgsensor.core.so',
+        'vendor/lib64/mt6878/libcameracustom.so',
+    ): blob_fixup()
+        .add_needed('libmtk_cam_shim_Tetris.so')
+        .remove_needed('s5kgn9sp_mipi_raw_IdxMgr.so')
+        .remove_needed('s5kgn9spofxian_mipi_raw_IdxMgr.so')
+        .remove_needed('gc08a8_mipi_raw_IdxMgr.so')
+        .remove_needed('gc08a8xl_mipi_raw_IdxMgr.so')
+        .remove_needed('gc08a8syx_mipi_raw_IdxMgr.so')
+        .remove_needed('ov50d40_mipi_raw_IdxMgr.so')
+        .remove_needed('ov50d40ofilm_mipi_raw_IdxMgr.so')
+        .remove_needed('gc02m1_mipi_raw_IdxMgr.so')
+        .remove_needed('mtk000_mipi_raw_IdxMgr.so'),
+    'vendor/lib64/mt6878/libmtkcam_thirdparty.customer.so': blob_fixup()
+        .remove_needed('libarcsoft_watermark.so')
+        .remove_needed('libarcsoft_portrait_super_night_raw.so')
+        .remove_needed('libarcsoft_superportrait.so')
+        .remove_needed('libarcsoft_super_night_raw.so')
+        .remove_needed('libarcsoft_scbokeh_image.so')
+        .remove_needed('libarcsoft_scbokeh_preview.so')
+        .remove_needed('libarcsoft_mf_superresolution.so')
+        .remove_needed('libmouth_mask_detection.arcsoft.so')
+        .remove_needed('libarcsoft_portrait_distortion_correction.so')
+        .remove_needed('libarcsoft_dark_vision_raw.so')
+        .remove_needed('libarcsoft_dualcam_refocus_video.so')
+        .remove_needed('libarcsoft_dualcam_refocus_image.so')
+        .remove_needed('libarcsoft_beautyshot.so')
+        .remove_needed('libarcsoft_aiscenedetection.so')
+        .remove_needed('libarcsoft_high_dynamic_range_v5.so'),
+    'vendor/bin/hw/mt6878/camerahalserver': blob_fixup()
+        .add_needed('libcamera_metadata_shim.so'),
+    (
+        'vendor/lib64/mt6878/libcam.hal3a.so',
+        'vendor/lib64/mt6878/libcam.hal3a.ctrl.so',
+        'vendor/lib64/mt6878/libmtkcam_request_requlator.so',
+        'vendor/lib64/libmtkcam_cputrack.so',
+    ): blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+    'vendor/lib64/libntcamcore.so': blob_fixup()
+        .remove_needed('libntcamextened.so'),
+    (
         'vendor/bin/hw/mt6878/android.hardware.graphics.allocator-V2-service-mediatek.mt6878',
         'vendor/lib64/egl/mt6878/libGLES_mali.so',
         'vendor/lib64/hw/mt6878/android.hardware.graphics.allocator-V2-mediatek.so',

@@ -1,0 +1,6 @@
+cc_library_shared {
+    name: "libmtk_cam_shim_Tetris",
+    srcs: ["mtk_cam_shim.cpp"],
+    vendor: true,
+    compile_multilib: "64",
+}

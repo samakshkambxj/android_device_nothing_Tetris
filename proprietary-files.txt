@@ -213,21 +213,9 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
-vendor/bin/hw/mt6878/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver;DISABLE_DEPS
+vendor/bin/hw/mt6878/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
 vendor/bin/mt6878/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/lib64/mt6878/libcam.hal3a.ctrl.so;SYMLINK=vendor/lib64/libcam.hal3a.ctrl.so
-vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
-vendor/etc/camera/CFR_para4_Nothing_23111_UW_v8200-4.bin
-vendor/etc/camera/CFR_para4_Nothing_23111_W_v8210-1.bin
-vendor/etc/camera/CFR_para4_Nothing_M_v100-8_AI.bin
-vendor/etc/camera/CFR_para4_Nothing_UW_v101-5_AI.bin
-vendor/etc/camera/M_Rater_Defect_v1.0.14_arm64_ppl3.model
-vendor/etc/camera/bokeh_caldata_uw_golden.bin
-vendor/etc/camera/facesr.sensetime.model
-vendor/etc/camera/lens_distortion_calibration.bin
-vendor/etc/camera/morpho_raw_deep_denoise_model.bin
-vendor/etc/camera/morpho_raw_deep_denoise_tuning_params.xml
-vendor/etc/camera/nothing_noise_stat.bin
 vendor/etc/init/camerahalserver.rc
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
 vendor/etc/vintf/manifest/manifest_isphal.xml
@@ -589,16 +577,10 @@ vendor/lib64/mt6878/libpda_usdriver.so;SYMLINK=vendor/lib64/libpda_usdriver.so
 vendor/lib64/mt6878/libvainr_model.so;SYMLINK=vendor/lib64/libvainr_model.so
 vendor/lib64/mt6878/libvega_face.so;SYMLINK=vendor/lib64/libvega_face.so
 vendor/lib64/mt6878/libwa_opticalzoomfactor.so;SYMLINK=vendor/lib64/libwa_opticalzoomfactor.so
-vendor/lib64/mt6878/mtk000_mipi_raw_tuning.so;SYMLINK=vendor/lib64/mtk000_mipi_raw_tuning.so
-vendor/lib64/mt6878/sc202cs_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/sc202cs_mipi_raw_IdxMgr.so
-vendor/lib64/mt6878/sc202cs_mipi_raw_tuning.so;SYMLINK=vendor/lib64/sc202cs_mipi_raw_tuning.so
-vendor/lib64/mt6878/sc202cssj_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/sc202cssj_mipi_raw_IdxMgr.so
-vendor/lib64/mt6878/sc202cssj_mipi_raw_tuning.so;SYMLINK=vendor/lib64/sc202cssj_mipi_raw_tuning.so
 vendor/lib64/mt6878/libacdk.so;SYMLINK=vendor/lib64/libacdk.so
 vendor/lib64/mt6878/libcam.hal3a.so;SYMLINK=vendor/lib64/libcam.hal3a.so
 vendor/lib64/mt6878/libmorpho_video_stabilizer.so;SYMLINK=vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/mt6878/libmtkcam_request_requlator.so;SYMLINK=vendor/lib64/libmtkcam_request_requlator.so
-vendor/lib64/gc16b3c2_mipi_raw_IdxMgr.so
 vendor/lib64/lib3a.ae.pipe.so
 vendor/lib64/lib3a.custom.shading.flow.so
 vendor/lib64/libBasicModule.so
@@ -611,15 +593,9 @@ vendor/lib64/libaaa_afassist_V2.so
 vendor/lib64/libaaa_afassistctrl.so
 vendor/lib64/libaaa_gma.so
 vendor/lib64/libalCFR.so
-vendor/lib64/libarcsoft_dark_vision_raw.so
-vendor/lib64/libarcsoft_dualcam_refocus_image.so
-vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
-vendor/lib64/libarcsoft_native_hdrbokeh_engine.so
 vendor/lib64/libarcsoft_night_video.so
-vendor/lib64/libarcsoft_portrait_super_night_raw.so
-vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libcam.hal3a.custom.ae.HDRStateEvaluator.so
 vendor/lib64/libcam.zoomoverridemgr.so
 vendor/lib64/libcamalgo.WarpMapResizer.so
@@ -631,7 +607,6 @@ vendor/lib64/libcamalgo.sat.so
 vendor/lib64/libcamalgo.utility.so
 vendor/lib64/libcamalgo.vsdofUtil.so
 vendor/lib64/libcamalgo.warp.so
-vendor/lib64/libcamxextension_night.so
 vendor/lib64/libdlrmsc.so
 vendor/lib64/libfeature.hdr10.so
 vendor/lib64/libfeaturepolicy.so
@@ -644,7 +619,6 @@ vendor/lib64/libjni_rater_api.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libmorpho_RapidEffect.so
-vendor/lib64/libmouth_mask_detection.arcsoft.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmtk_bsg.so
 vendor/lib64/libmtkcam_cputrack.so
@@ -684,7 +658,6 @@ vendor/lib64/libttm_nightsight_ae.so
 vendor/lib64/libudf.so
 vendor/lib64/libultrahdr_mtk.so
 vendor/lib64/libvividhdr.so
-vendor/lib64/ov50d40_mipi_raw_IdxMgr.so
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
@@ -1054,12 +1027,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 
 # MediaTek Vision Processing Unit
 vendor/lib64/libmvpu_cic_ci_compiler.so
-vendor/lib64/libmvpu_cic_ci_compiler_25.so
-vendor/lib64/libmvpu_clc_14_cl_compiler_25.so
-vendor/lib64/libmvpu_clc_14_mvpu_debuginfo_25.so
-vendor/lib64/libmvpu_clc_14_mvpu_elf_25.so
-vendor/lib64/libmvpu_clc_14_mvpu_isa_25.so
-vendor/lib64/libmvpu_clc_14_mvpu_utility_25.so
 vendor/lib64/libmvpu_clc_cl_compiler.so
 vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
 vendor/lib64/libmvpu_clc_mvpu_elf.so
@@ -1067,18 +1034,11 @@ vendor/lib64/libmvpu_clc_mvpu_utility.so
 vendor/lib64/libmvpu_clc_vpu_isa.so
 vendor/lib64/libmvpu_config.so
 vendor/lib64/libmvpu_engine.so
-vendor/lib64/libmvpu_engine_25.so
-vendor/lib64/libmvpu_engine_25_pub.so
 vendor/lib64/libmvpu_engine_pub.so
 vendor/lib64/libmvpu_pattern.so
-vendor/lib64/libmvpu_pattern_25.so
-vendor/lib64/libmvpu_pattern_25_pub.so
 vendor/lib64/libmvpu_pattern_pub.so
 vendor/lib64/libmvpu_runtime.so
-vendor/lib64/libmvpu_runtime_25.so
-vendor/lib64/libmvpu_runtime_25_pub.so
 vendor/lib64/libmvpu_runtime_builtin.so
-vendor/lib64/libmvpu_runtime_builtin_25.so
 vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop25_mtk_cv.so
 vendor/lib64/libmvpuop25_mtk_nn.so
