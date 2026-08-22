@@ -1,10 +1,6 @@
 # All proprietary files from this list, unless pinned and noted otherwise,
 # are from Nothing CMF Phone (1) (Tetris_B4.1-260615-1652).
 
-# AEE
-vendor/lib64/libaedv.so
-vendor/lib64/libladder.so
-
 # Audio
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_rv.xml
@@ -644,7 +640,6 @@ vendor/lib64/libst_ns_models.so
 vendor/lib64/libstmobile_rater.so
 vendor/lib64/libttm_nightsight.so
 vendor/lib64/libttm_nightsight_ae.so
-vendor/lib64/libudf.so
 vendor/lib64/libultrahdr_mtk.so
 vendor/lib64/libvividhdr.so
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V2-ndk.so
