@@ -160,6 +160,7 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/hw/mt6878/vendor.mediatek.hardware.pq_aidl-impl.so': blob_fixup()
         .add_needed('libui_shim.so')
+        .replace_needed('libui.so', 'libui-v34.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     (
         'vendor/lib64/mt6878/libmmlpqImpl.so',
