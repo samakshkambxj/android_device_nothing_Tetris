@@ -86,3 +86,10 @@ prebuilt_etc {
     src: "ueventd.mt6878.rc",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.mt6878.power.rc",
+    src: "init.mt6878.power.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}

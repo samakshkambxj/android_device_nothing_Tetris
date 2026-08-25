@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6878.rc \
+    init.mt6878.power.rc \
     init.mt6878.usb.rc \
     init.mtkgki.rc \
     init.nothing.hw.rc \
