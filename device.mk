@@ -179,6 +179,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
+# Properties
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 # Security
 BOOT_SECURITY_PATCH := 2026-04-05
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
