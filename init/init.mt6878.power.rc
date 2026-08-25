@@ -27,9 +27,7 @@ on post-fs-data
     write /sys/block/sdc/queue/nr_requests 256
 
 on property:sys.boot_completed=1
-    write /sys/block/mmcblk0/queue/iostats 1
     write /sys/block/mmcblk0/queue/nr_requests 64
-    write /sys/block/sdc/queue/iostats 1
     write /sys/block/sdc/queue/nr_requests 64
 
 
@@ -81,8 +79,6 @@ service vendor.hwcomposer-3-2 /vendor/bin/hw/android.hardware.graphics.composer@
     user system
     group graphics drmrpc
     capabilities SYS_NICE
-    onrestart restart vendor.hwcomposer-3-2
-    onrestart restart camerahalserver
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
@@ -92,8 +88,8 @@ service vendor.gralloc-v2 /vendor/bin/hw/android.hardware.graphics.allocator-V2-
     user system
     group graphics drmrpc
     capabilities SYS_NICE
+    onrestart restart surfaceflinger
     onrestart restart vendor.hwcomposer-3-2
     onrestart restart camerahalserver
-    onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
