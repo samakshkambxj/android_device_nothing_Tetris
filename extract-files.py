@@ -51,7 +51,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
-        .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
+        .replace_needed('libalsautils.so', 'libalsautils-v33.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     (
         'vendor/lib64/mt6878/libcameracustom.imgsensor.core.so',
         'vendor/lib64/mt6878/libcameracustom.so',
@@ -155,6 +156,16 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libnativewindow.so'),
     'vendor/lib64/libnvram.so': blob_fixup()
         .add_needed('libbase_shim.so'),
+
+    (
+        'vendor/lib64/hw/mt6878/vendor.mediatek.hardware.pq_aidl-impl.so',
+        'vendor/lib64/mt6878/libmmlpqImpl.so',
+        'vendor/lib64/libpqxmlflagparser.so',
+        'vendor/lib64/libpqxmlparser.so',
+        'vendor/lib64/libsilkybrightnesscore.so',
+        'vendor/lib64/librt_extamp_intf.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
