@@ -92,6 +92,19 @@ service vendor.hwcomposer-3-2 /vendor/bin/hw/android.hardware.graphics.composer@
     user system
     group graphics drmrpc
     capabilities SYS_NICE
+    onrestart restart vendor.hwcomposer-3-2
+    onrestart restart camerahalserver
+    onrestart restart surfaceflinger
+    task_profiles ProcessCapacityHigh HighPerformance
+    override
+
+service vendor.gralloc-v2 /vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart vendor.hwcomposer-3-2
+    onrestart restart camerahalserver
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
