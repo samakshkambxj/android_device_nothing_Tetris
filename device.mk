@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    libtinycompress
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -197,6 +198,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
+    libpowerhalwrap_vendor \
     libmtkperf_client
 
 PRODUCT_COPY_FILES += \
