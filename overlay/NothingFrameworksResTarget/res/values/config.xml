@@ -486,4 +486,7 @@
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">121</integer>
+
+   <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 </resources>
