@@ -42,6 +42,7 @@ vendor.streamout.pcm.dump=0
 vendor.streamin.pcm.dump=0
 
 # Bluetooth
+bluetooth.device.default_name=CMF Phone 1
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
