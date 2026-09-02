@@ -11,10 +11,8 @@ import /vendor/etc/init/hw/init.volte.rc
 import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.mt6878.power.rc
-# #ifdef NT_EDIT
 # add to new_feature BEE-142
 import /vendor/etc/init/hw/init.board_id.rc
-# #endif /* NT_EDIT */
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
@@ -244,7 +242,6 @@ on post-fs-data
     chmod 0775 /vendor/xbin/MPED
     chmod 0666 /dev/gps_emi
 
-#ifdef NT_EDIT
 #BEE-50 :add TP node permission
     chown system system /proc/touchpanel/diff_data
     chmod 0666 /proc/touchpanel/diff_data
@@ -268,7 +265,6 @@ on post-fs-data
     chmod 0666 /sys/class/leds/noth_leds/state
     chown system system /proc/touchpanel/palm_to_sleep_support
     chmod 0666 /proc/touchpanel/palm_to_sleep_support
-#endif /* NT_EDIT */
 
 # -----------------------
 # Add by MTK
@@ -983,63 +979,43 @@ on boot
     chown root radio /proc/net/netfilter/nfnetlink_log
     chown root radio /proc/net/netfilter/nfnetlink_queue
 
-# #ifdef NT_EDIT
 #charger
     chown system system /proc/charger/charge_pump_enable
-    chown system system /proc/charger/is_aging_test
-    chown system system /proc/charger/nt_abnormal_status
-    chown system system /proc/charger/nt_data
     chown system system /proc/charger/usb_charger_en
     chown system system /proc/charger/usb_real_type
     chown system system /proc/charger/voltage_adc
     chown system system /proc/charger/usb/temp
     chown system system	/proc/charger/typec_cc_orientation
     chown system system	/proc/charger/scenario_fcc
-    chown system system	/proc/charger/ship_mode
     chown system system	/proc/charger/real_soc
-    chown system system /proc/charger/nt_otg_enable
     chown system system /proc/charger/chg_data_id
     chown system system /proc/charger/usb_temp
     chown system system /sys/class/power_supply/mtk-master-charger/voltage_max
     chown system system /proc/charger/camera_on
-    chown system system /proc/charger/nt_qmax
-    chown system system /proc/charger/nt_quse
-    chown system system /proc/charger/nt_resistance
     chown system system /proc/charger/maxchargingcurrent
     chown system system /proc/charger/maxchargingvoltage
     chown system system /proc/charger/ibus_now
-    chown system system /proc/charger/nt_adp_power
     chown system system /proc/charger/battery_health
     chown system system /proc/charger/area_id
     chown system system /proc/charger/ui_soc
     chmod 0666 /proc/charger/charge_pump_enable
-    chmod 0666 /proc/charger/is_aging_test
-    chmod 0666 /proc/charger/nt_abnormal_status
-    chmod 0666 /proc/charger/nt_data
     chmod 0666 /proc/charger/usb_charger_en
     chmod 0666 /proc/charger/usb_real_type
     chmod 0666 /proc/charger/voltage_adc
     chmod 0666 /proc/charger/usb/temp
     chmod 0444 /proc/charger/typec_cc_orientation
     chmod 0666 /proc/charger/scenario_fcc
-    chmod 0666 /proc/charger/ship_mode
     chmod 0444 /proc/charger/real_soc
-    chmod 0666 /proc/charger/nt_otg_enable
     chmod 0444 /proc/charger/chg_data_id
     chmod 0444 /proc/charger/usb_temp
     chmod 0664  /sys/class/power_supply/mtk-master-charger/voltage_max
     chmod 0666 /proc/charger/camera_on
-    chmod 0444 /proc/charger/nt_qmax
-    chmod 0444 /proc/charger/nt_quse
-    chmod 0444 /proc/charger/nt_resistance
     chmod 0444 /proc/charger/maxchargingcurrent
     chmod 0444 /proc/charger/maxchargingvoltage
     chmod 0444 /proc/charger/ibus_now
-    chmod 0444 /proc/charger/nt_adp_power
     chmod 0444 /proc/charger/battery_health
     chmod 0666 /proc/charger/area_id
     chmod 0666 /proc/charger/ui_soc
-# #endif /* NT_EDIT */
 
 # WMT proc
     chown shell system /proc/driver/wmt_dbg
@@ -1056,69 +1032,11 @@ on boot
     chown system radio /dev/ttyGS1
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
-#NT core
-    chmod 550 /proc/nt_meminfo/
-    chown system system /proc/nt_meminfo/
-    chmod 550 /proc/nt_meminfo/show_all_dmabuf
-    chown system system /proc/nt_meminfo/show_all_dmabuf
-    chmod 550 /proc/nt_meminfo/show_all_tasks
-    chown system system /proc/nt_meminfo/show_all_tasks
-    chmod 550 /proc/nt_meminfo/show_all_task_dma
-    chown system system /proc/nt_meminfo/show_all_task_dma
-    chmod 550 /proc/nt_disk/
-    chown system system /proc/nt_disk/
-    chmod 550 /proc/nt_disk/get_data_usage
-    chown system system /proc/nt_disk/get_data_usage
-    chmod 550 /proc/nt_taskinfo/
-    chown system system /proc/nt_taskinfo/
-    chmod 550 /proc/nt_taskinfo/show_all_tasks_id
-    chown system system /proc/nt_taskinfo/show_all_tasks_id
-    chmod 550 /proc/nt_value_check/
-    chown system system /proc/nt_value_check/
-    chmod 770 /proc/nt_value_check/value_check_node
-    chown system system /proc/nt_value_check/value_check_node
 
-    chmod 550 /proc/nt_named_thread_affinity/
-    chown system system /proc/nt_named_thread_affinity/
-    chmod 660 /proc/nt_named_thread_affinity/pid
-    chown system system /proc/nt_named_thread_affinity/pid
-    chmod 660 /proc/nt_named_thread_affinity/named_thread_affinity
-    chown system system /proc/nt_named_thread_affinity/named_thread_affinity
-    chmod 660 /proc/nt_named_thread_affinity/reset
-    chown system system /proc/nt_named_thread_affinity/reset
-    chmod 660 /proc/nt_named_thread_affinity/debug
-    chown system system /proc/nt_named_thread_affinity/debug
 
-    chown system system /sys/devices/system/cpu/sched_ctl/nt_sched_set_task_vip
-    chmod 0660 /sys/devices/system/cpu/sched_ctl/nt_sched_set_task_vip
-    chown system system /sys/devices/system/cpu/sched_ctl/nt_sched_unset_task_vip
-    chmod 0660 /sys/devices/system/cpu/sched_ctl/nt_sched_unset_task_vip
 
-    chmod 660 /sys/module/task_turbo/parameters/nt_set_turbo_pid
-    chown system system /sys/module/task_turbo/parameters/nt_set_turbo_pid
-    chmod 660 /sys/module/task_turbo/parameters/nt_unset_turbo_pid
-    chown system system /sys/module/task_turbo/parameters/nt_unset_turbo_pid
-#NT CHG   
 on property:sys.UiBatteryLevel=*
     write proc/charger/ui_soc ${sys.UiBatteryLevel}
-#NT core
-on property:sys.system_server.start_count=1
-    write /sys/devices/virtual/NT/NT_reserve_kernel_log/boot_stage_systemserver 1
-
-on property:persist.sys.mglru_enable=true
-    write /sys/kernel/mm/lru_gen/enabled y
-
-on property:persist.sys.mglru_enable=false
-    write /sys/kernel/mm/lru_gen/enabled n
-
-on property:persist.sys.mglru_min_ttl_ms=*
-    write /sys/kernel/mm/lru_gen/min_ttl_ms ${persist.sys.mglru_min_ttl_ms}
-
-# brian add for BULB-3810 @{
-on property:sys.ship_mode2.enable=1
-   write /dev/gauge/reset_battery_cycle 1
-# @}
-
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
@@ -1279,17 +1197,6 @@ on property:vendor.connsys.adie.chipid=0x6637
     # unload override RRO
     write /dev/kmsg "WifiHAL: Unload disable_dual RRO"
     start wifi_unload_disable_dual_rro
-
-on property:sys.touch.game_mode.enable=*
-    write /proc/touchpanel/game_mode ${sys.touch.game_mode.enable}
-on property:sys.touch.edge_mode.enable=*
-    write /proc/touchpanel/edge_mode ${sys.touch.edge_mode.enable}
-on property:sys.touch.fod_en.enable=*
-    write /proc/touchpanel/fod_mode ${sys.touch.fod_en.enable}
-on property:sys.touch.single_en.enable=*
-    write /proc/touchpanel/gesture_mode ${sys.touch.single_en.enable}
-on property:sys.touch.pocket_mode=*
-    write /proc/touchpanel/pocket_mode ${sys.touch.pocket_mode}
 
 on property:dev.mnt.blk.data=sdc84 && property:sys.sd.enable=1
     write /sys/dev/block/${sys.sd.devid}/queue/read_ahead_kb 2048
