@@ -56,9 +56,6 @@ service gnss_daemon /vendor/bin/gnss_daemon
     group gps inet misc sdcard_rw sdcard_r media_rw system radio wakelock
     socket gnss_daemon stream 660 gps system
 
-on property:persist.vendor.em.dy.debug=1
-    stop lbs_dbg
-
 #service BGW /vendor/bin/BGW
 #    user system
 #    group gps system radio
