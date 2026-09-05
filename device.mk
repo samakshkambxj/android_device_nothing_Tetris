@@ -187,6 +187,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
+# NTF
+PRODUCT_PACKAGES += \
+    nt-fwk.Tetris
+
+PRODUCT_BOOT_JARS += \
+    nt-fwk.Tetris
+
 # Overlays
 PRODUCT_PACKAGES += \
     NothingFrameworksResTarget \
