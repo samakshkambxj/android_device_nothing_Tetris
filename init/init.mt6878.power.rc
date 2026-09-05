@@ -20,6 +20,20 @@ on init
     write /proc/sys/kernel/sched_min_granularity_ns 500000
     write /proc/sys/kernel/sched_wakeup_granularity_ns 2500000
 
+on charger
+    # Lock to lowest frequency on charger mode
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "powersave"
+
+    # Offline all cores except cpu0
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+
 on post-fs-data
     # multi-gen LRU
     write /sys/kernel/mm/lru_gen/enabled y
