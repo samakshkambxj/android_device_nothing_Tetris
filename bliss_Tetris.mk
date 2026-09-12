@@ -16,6 +16,11 @@ $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+BLISS_BUILDTYPE := OFFICIAL
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_HAS_UDFPS := true
+TARGET_GAPPS_VARIANT := micro
+
 PRODUCT_NAME := bliss_Tetris
 PRODUCT_DEVICE := Tetris
 PRODUCT_BRAND := Nothing
