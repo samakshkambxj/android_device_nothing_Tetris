@@ -116,12 +116,12 @@
 /dev/teeperf              0660   system     system
 
 #v4l2 device
-/dev/video*      0660 camera system
-/dev/media*      0660 camera system
-/dev/v4l-subdev* 0660 camera system
+/dev/video*      0660 media system
+/dev/media*      0660 media system
+/dev/v4l-subdev* 0660 media system
 
 #v4l2 codec
-/dev/vcu    0660 camera system
+/dev/vcu    0660 media system
 
 #fmt mode
 /dev/vdec-fmt    0660 media system
