@@ -24,19 +24,24 @@ class PocketSensor(
 
     private val executorService = Executors.newSingleThreadExecutor()
     private var entryTimestamp = 0L
+    private var wasInPocket = false
 
     override fun onSensorChanged(event: SensorEvent) {
         if (DEBUG) Log.d(TAG, "Got sensor event: ${event.values[0]}")
-        val delta = SystemClock.elapsedRealtime() - entryTimestamp
-        if (delta < MIN_PULSE_INTERVAL_MS) {
-            return
-        }
-        entryTimestamp = SystemClock.elapsedRealtime()
-        if (event.values[0] == sensorValue) {
+        val isNear = event.values[0] == sensorValue
+        if (isNear) {
+            wasInPocket = true
             SystemProperties.set("sys.touch.pocket_mode", "1")
-            Utils.launchDozePulse(context)
         } else {
             SystemProperties.set("sys.touch.pocket_mode", "0")
+            if (wasInPocket) {
+                wasInPocket = false
+                val delta = SystemClock.elapsedRealtime() - entryTimestamp
+                if (delta >= MIN_PULSE_INTERVAL_MS) {
+                    entryTimestamp = SystemClock.elapsedRealtime()
+                    Utils.launchDozePulse(context)
+                }
+            }
         }
     }
 
@@ -57,6 +62,8 @@ class PocketSensor(
             Log.d(TAG, "Disabling")
             executorService.submit {
                 sensorManager.unregisterListener(this, sensor)
+                wasInPocket = false
+                SystemProperties.set("sys.touch.pocket_mode", "0")
             }
         }
     }
