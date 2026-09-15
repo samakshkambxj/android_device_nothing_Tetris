@@ -11,6 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.IBinder
+import android.os.PowerManager
 import android.util.Log
 
 class DozeService : Service() {
@@ -46,6 +47,10 @@ class DozeService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        val powerManager = getSystemService(PowerManager::class.java)
+        if (powerManager != null && !powerManager.isInteractive) {
+            onDisplayOff()
+        }
         return START_STICKY
     }
 
