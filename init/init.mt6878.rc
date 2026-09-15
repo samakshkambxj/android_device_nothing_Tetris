@@ -333,10 +333,13 @@ on post-fs-data
     chown system system /dev/goodix_fp
     chmod 0660 /dev/goodix_fp
 
+    chmod 0666 /sys/panel_feature/hbm_mode
+    chown system system /sys/panel_feature/hbm_mode
     chmod 0666 /sys/panel_feature/ui_status
     chown system system /sys/panel_feature/ui_status
 
     chmod 0666 /sys/devices/platform/soc/1401a000.dsi0/hbm
+    chown system system /sys/devices/platform/soc/1401a000.dsi0/hbm
 
     #v4l2 codec
     chmod 0660 /dev/vcu
