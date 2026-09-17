@@ -731,6 +731,7 @@ vendor/lib64/hw/mt6878/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYM
 vendor/lib64/hw/hwcomposer.mtk_common.so;DISABLE_DEPS
 vendor/lib64/mt6878/arm.mali.platform-V2-ndk.so;SYMLINK=vendor/lib64/arm.mali.platform-V2-ndk.so
 vendor/lib64/mt6878/libmml.so;SYMLINK=vendor/lib64/libmml.so
+vendor/lib64/android.frameworks.displayservice@1.0.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
