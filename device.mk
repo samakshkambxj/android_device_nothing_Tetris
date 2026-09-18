@@ -120,6 +120,9 @@ PRODUCT_COPY_FILES += \
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+PRODUCT_PACKAGES += \
+        DolbyAtmos
+
 # Doze
 PRODUCT_PACKAGES += \
     NothingDoze
