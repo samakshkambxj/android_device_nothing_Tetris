@@ -140,7 +140,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-include device/bliss/sepolicy/libion/sepolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
