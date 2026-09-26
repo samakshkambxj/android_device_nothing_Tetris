@@ -141,6 +141,7 @@ debug.sf.region_sampling_duration_ns=8333333
 debug.sf.region_sampling_period_ns=99999984
 debug.sf.region_sampling_timer_timeout_ns=99999984
 ro.hardware.gralloc=common
+ro.sf.blurs_are_expensive=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
