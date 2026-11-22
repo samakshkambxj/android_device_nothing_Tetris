@@ -1,6 +1,4 @@
 # Charger
-genfscon sysfs /devices/platform/charger/charge_bypass u:object_r:vendor_tetris_charge_bypass:s0
-genfscon sysfs /devices/platform/charger/charge_bypass_status u:object_r:vendor_tetris_charge_bypass_status:s0
 genfscon proc /charger                                                         u:object_r:vendor_proc_charger:s0
 genfscon sysfs /devices/platform/nt_chg/power_supply                           u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/11d71000.i2c/i2c-11/11-006a/power_supply  u:object_r:sysfs_batteryinfo:s0
@@ -62,29 +60,3 @@ genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-09/mt6685-rtc/rtc/rt
 genfscon sysfs /devices/platform/soc/1e000000.adspsys/wakeup                                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1f000000.mmlsys-config/wakeup                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup39                                                                  u:object_r:sysfs_wakeup:s0
-
-# CPU policy limits and per-core hotplug for Tetris Parts.
-genfscon sysfs /devices/system/cpu/cpufreq/policy0/scaling_min_freq u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy0/scaling_max_freq u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy4/scaling_min_freq u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy4/scaling_max_freq u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu1/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu2/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu3/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu4/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu5/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu6/online u:object_r:vendor_tetris_cpu_control:s0
-genfscon sysfs /devices/system/cpu/cpu7/online u:object_r:vendor_tetris_cpu_control:s0
-
-genfscon sysfs /devices/system/cpu/cpufreq/policy0/scaling_locked_limits u:object_r:vendor_tetris_cpu_lock:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy4/scaling_locked_limits u:object_r:vendor_tetris_cpu_lock:s0
-
-# Tetris Parts: read GPU state/OPPs and select one existing OPP only.
-genfscon proc /gpufreqv2/gpufreq_status u:object_r:vendor_tetris_gpu_status:s0
-genfscon proc /gpufreqv2/gpu_working_opp_table u:object_r:vendor_tetris_gpu_status:s0
-genfscon proc /gpufreqv2/fix_target_opp_index u:object_r:vendor_tetris_gpu_control:s0
-
-genfscon proc /gpufreqv2/limit_table u:object_r:vendor_tetris_gpu_range:s0
-
-# Exact read-only GPU load counter; no access to GED tuning controls.
-genfscon sysfs /kernel/ged/hal/gpu_utilization u:object_r:vendor_tetris_gpu_utilization:s0

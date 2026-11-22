@@ -1,9 +1,0 @@
-# Shared request: platform app owns the setting, vendor init consumes it.
-system_public_prop(tetrisparts_thermal_request_prop)
-
-# thermal_core keeps its legacy service name. Export only its exact status,
-# otherwise vendor init rejects actions referencing init.svc.thermal_core.
-system_restricted_prop(tetrisparts_thermal_daemon_prop)
-
-# Parts publishes consent for the vendor init control services.
-system_restricted_prop(tetris_parts_consent_prop)

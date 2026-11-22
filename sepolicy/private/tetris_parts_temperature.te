@@ -1,2 +1,0 @@
-# Framework thermal measurements and reported severity (DEVICE_POWER checked by the service).
-allow tetris_parts_app thermal_service:service_manager find;

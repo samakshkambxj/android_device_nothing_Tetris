@@ -130,10 +130,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NothingDoze
 
-# Device controls
-PRODUCT_PACKAGES += \
-    TetrisParts
-
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
